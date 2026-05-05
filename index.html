@@ -155,11 +155,11 @@ body{
 .ctable tr.cr.ca td{background:rgba(21,101,192,.07);}
 .ctable tr.cr.cu.ca td{background:rgba(232,25,44,.05);}
 .cbb{font-family:var(--mono);font-size:9px;font-weight:700;padding:2px 6px;border-radius:3px;letter-spacing:.5px;}
-.cbu{background:rgba(232,25,44,.2);color:#ff8b97;}
-.cbg{background:rgba(21,101,192,.2);color:#7baede;}
+.cbu{background:rgba(21,101,192,.2);color:#7baede;}
+.cbg{background:rgba(232,25,44,.2);color:#ff8b97;}
 .cchk{width:14px;height:14px;border:2px solid var(--bb);border-radius:3px;display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:900;transition:all .15s;}
-.ca .cchk{background:var(--blu);border-color:var(--blu);color:#fff;}
-.cu.ca .cchk{background:var(--red);border-color:var(--red);}
+.ca .cchk{background:var(--red);border-color:var(--red);color:#fff;}
+.cu.ca .cchk{background:var(--blu);border-color:var(--blu);color:#fff;}
 
 /* EXPLOIT SUMMARY */
 .exsum{background:linear-gradient(135deg,rgba(21,101,192,.1),rgba(245,200,66,.04));border:1px solid rgba(21,101,192,.2);border-radius:8px;padding:13px;margin-top:10px;position:relative;overflow:hidden;}
@@ -562,6 +562,8 @@ body{
   .cbu { background: #fdd9dc !important; color: #c91527 !important; }
   .cbg { background: #d9e5f5 !important; color: #1565c0 !important; }
   .cchk { border-color: #5a7497 !important; }
+  .ca .cchk { background: #c91527 !important; border-color: #c91527 !important; color: #fff !important; }
+  .cu.ca .cchk { background: #1565c0 !important; border-color: #1565c0 !important; color: #fff !important; }
 
   /* Exploit summary */
   .exsum {
@@ -668,6 +670,111 @@ body{
   .htitle{font-size:60px;}
   .roi-grid{grid-template-columns:repeat(2,1fr);}
 }
+
+/* ── TABLET ── */
+@media (max-width:768px){
+  /* Header */
+  .hin{padding:24px 20px;gap:16px;flex-wrap:wrap;}
+  .htitle{font-size:44px;letter-spacing:-1px;}
+  .hdesc{margin-left:0;text-align:left;border-left:none;padding-left:0;border-top:1px solid rgba(232,25,44,.3);padding-top:12px;max-width:100%;}
+  .htop-tools{top:10px;right:12px;gap:6px;}
+  .htop-btn{font-size:9px;padding:5px 10px;}
+
+  /* KPI bar — 2x2 grid */
+  .kbar{grid-template-columns:repeat(2,1fr);}
+  .ki{padding:14px 16px;gap:10px;}
+  .kval{font-size:22px;}
+  .klbl{font-size:9px;}
+  .kdelta{font-size:9px;}
+
+  /* Scenarios */
+  .scenario-bar{padding:10px 12px;gap:8px;flex-wrap:wrap;}
+  .preset{font-size:9px;padding:5px 10px;}
+
+  /* ROI grid */
+  .roi-grid{grid-template-columns:repeat(2,1fr);}
+  .roi-val{font-size:22px;}
+
+  /* Budget hero */
+  .budget-amount{font-size:48px;}
+  .budget-amount .euro{font-size:32px;}
+
+  /* Photos */
+  .iphotos{grid-template-columns:1fr;}
+  .iph.feature{aspect-ratio:16/9;}
+  .iph.standard{aspect-ratio:16/9;}
+
+  /* Layout */
+  .sb{padding:14px;}
+  .cnt{padding:14px;}
+}
+
+/* ── MOBILE ── */
+@media (max-width:480px){
+  /* Header compact */
+  .hin{padding:18px 16px;gap:12px;}
+  .hlogo{flex-direction:row;align-items:center;gap:8px;}
+  .hcrest{width:40px;height:40px;font-size:16px;flex-shrink:0;}
+  .hlogo-yr{font-size:11px;}
+  .hbadge{font-size:9px;padding:3px 9px;letter-spacing:1.5px;}
+  .htitle{font-size:36px;letter-spacing:-1px;line-height:.9;}
+  .hsub{font-size:9px;letter-spacing:1.5px;margin-top:4px;}
+  .hdesc{display:none;}
+  .htop-tools{top:8px;right:10px;gap:4px;}
+  .htop-btn{font-size:8px;padding:4px 8px;gap:4px;}
+
+  /* KPI bar — 2x2 bien lisible */
+  .kbar{grid-template-columns:repeat(2,1fr);gap:1px;}
+  .ki{padding:14px 12px;gap:8px;flex-direction:column;align-items:flex-start;}
+  .kico{font-size:18px;}
+  .kval{font-size:26px;line-height:1;}
+  .kval.bud{font-size:22px;}
+  .klbl{font-size:8px;letter-spacing:1px;margin-top:2px;}
+  .kdelta{font-size:9px;margin-top:1px;}
+
+  /* Scenario bar */
+  .scenario-bar{padding:8px 10px;gap:6px;}
+  .scenario-label{font-size:9px;}
+  .preset{font-size:9px;padding:4px 9px;}
+
+  /* ROI — 2 colonnes */
+  .roi-grid{grid-template-columns:repeat(2,1fr);gap:8px;}
+  .roi-card{padding:10px;}
+  .roi-val{font-size:20px;}
+  .roi-lbl{font-size:8px;}
+
+  /* Budget hero */
+  .budget-amount{font-size:42px;}
+  .budget-amount .euro{font-size:26px;}
+  .budget-amount .ht{font-size:14px;}
+  .budget-breakdown{font-size:11px;gap:12px;flex-wrap:wrap;}
+
+  /* Table scroll horizontal */
+  .dt{font-size:11px;}
+  .dt th,.dt td{padding:7px 8px;}
+
+  /* Photos */
+  .iphotos{grid-template-columns:1fr;gap:8px;}
+  .iph.feature{aspect-ratio:16/9;}
+  .iph.standard{aspect-ratio:16/9;}
+  .iphv{font-size:32px;}
+  .iph.feature .iphv{font-size:40px;}
+
+  /* Sidebar */
+  .sb{padding:12px;gap:10px;}
+  .cnt{padding:12px;gap:12px;}
+  .cb{padding:12px;}
+  .sbb{padding:12px;}
+
+  /* Map smaller on mobile */
+  .mapwrap{height:220px;}
+
+  /* Cards */
+  .card,.sbs{border-radius:8px;}
+
+  /* Compare panel */
+  .compare-panel{width:calc(100vw - 24px);right:12px;bottom:12px;}
+}
 </style>
 </head>
 <body>
@@ -766,48 +873,48 @@ body{
           </defs>
           <ellipse cx="160" cy="155" rx="135" ry="120" fill="url(#mg)"/>
           <path d="M102,24 L118,17 L140,21 L168,13 L190,22 L202,16 L215,28 L226,36 L230,52 L242,65 L248,84 L242,102 L254,115 L248,132 L236,144 L230,162 L222,178 L210,190 L204,208 L186,220 L172,232 L154,237 L135,242 L118,230 L100,224 L82,212 L70,199 L60,182 L54,164 L50,146 L56,130 L44,112 L50,94 L57,75 L70,58 L85,40 Z" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)" stroke-width="1.5"/>
-          <g class="cdm" data-city="paris" onclick="tCityMap('paris')"><circle cx="148" cy="82" r="6" fill="#e8192c" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="157" y="87" class="cdmlbl">Paris</text></g>
-          <g class="cdm" data-city="lille" onclick="tCityMap('lille')"><circle cx="148" cy="44" r="6" fill="#e8192c" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="157" y="49" class="cdmlbl">Lille</text></g>
-          <g class="cdm" data-city="caen" onclick="tCityMap('caen')"><circle cx="97" cy="72" r="6" fill="#e8192c" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="68" y="67" class="cdmlbl">Caen</text></g>
-          <g class="cdm" data-city="strasbourg" onclick="tCityMap('strasbourg')"><circle cx="220" cy="76" r="6" fill="#e8192c" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="228" y="81" class="cdmlbl">Strasb.</text></g>
-          <g class="cdm" data-city="auxerre" onclick="tCityMap('auxerre')"><circle cx="162" cy="106" r="6" fill="#e8192c" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="170" y="111" class="cdmlbl">Auxerre</text></g>
-          <g class="cdm" data-city="tours" onclick="tCityMap('tours')"><circle cx="118" cy="120" r="6" fill="#e8192c" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="126" y="125" class="cdmlbl">Tours</text></g>
-          <g class="cdm" data-city="troyes" onclick="tCityMap('troyes')"><circle cx="176" cy="92" r="6" fill="#e8192c" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="184" y="97" class="cdmlbl">Troyes</text></g>
-          <g class="cdm" data-city="clermont" onclick="tCityMap('clermont')"><circle cx="170" cy="152" r="6" fill="#e8192c" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="178" y="157" class="cdmlbl">Clermont</text></g>
-          <g class="cdm" data-city="nantes" onclick="tCityMap('nantes')"><circle cx="93" cy="140" r="6" fill="#1565c0" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="63" y="136" class="cdmlbl">Nantes</text></g>
-          <g class="cdm" data-city="larochelle" onclick="tCityMap('larochelle')"><circle cx="88" cy="166" r="6" fill="#1565c0" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="54" y="162" class="cdmlbl">La Roch.</text></g>
-          <g class="cdm" data-city="bordeaux" onclick="tCityMap('bordeaux')"><circle cx="98" cy="194" r="6" fill="#1565c0" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="65" y="190" class="cdmlbl">Bordeaux</text></g>
-          <g class="cdm" data-city="lorient" onclick="tCityMap('lorient')"><circle cx="66" cy="138" r="6" fill="#1565c0" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="38" y="134" class="cdmlbl">Lorient</text></g>
-          <g class="cdm" data-city="toulouse" onclick="tCityMap('toulouse')"><circle cx="144" cy="212" r="6" fill="#1565c0" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="124" y="228" class="cdmlbl">Toulouse</text></g>
+          <!-- UGC = BLEU -->
+          <g class="cdm" data-city="paris" onclick="tCityMap('paris')"><circle cx="148" cy="82" r="6" fill="#1565c0" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="157" y="87" class="cdmlbl">Paris</text></g>
           <g class="cdm" data-city="lyon" onclick="tCityMap('lyon')"><circle cx="196" cy="160" r="6" fill="#1565c0" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="204" y="165" class="cdmlbl">Lyon</text></g>
-          <g class="cdm" data-city="marseille" onclick="tCityMap('marseille')"><circle cx="198" cy="212" r="6" fill="#1565c0" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="174" y="228" class="cdmlbl">Marseille</text></g>
+          <g class="cdm" data-city="toulouse" onclick="tCityMap('toulouse')"><circle cx="144" cy="212" r="6" fill="#1565c0" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="124" y="228" class="cdmlbl">Toulouse</text></g>
+          <g class="cdm" data-city="bordeaux" onclick="tCityMap('bordeaux')"><circle cx="98" cy="194" r="6" fill="#1565c0" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="65" y="190" class="cdmlbl">Bordeaux</text></g>
+          <g class="cdm" data-city="nantes" onclick="tCityMap('nantes')"><circle cx="93" cy="140" r="6" fill="#1565c0" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="63" y="136" class="cdmlbl">Nantes</text></g>
+          <g class="cdm" data-city="lille" onclick="tCityMap('lille')"><circle cx="148" cy="44" r="6" fill="#1565c0" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="157" y="49" class="cdmlbl">Lille</text></g>
+          <g class="cdm" data-city="strasbourg" onclick="tCityMap('strasbourg')"><circle cx="220" cy="76" r="6" fill="#1565c0" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="228" y="81" class="cdmlbl">Strasb.</text></g>
+          <g class="cdm" data-city="caen" onclick="tCityMap('caen')"><circle cx="97" cy="72" r="6" fill="#1565c0" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="68" y="67" class="cdmlbl">Caen</text></g>
+          <!-- CGR = ROUGE -->
+          <g class="cdm" data-city="marseille" onclick="tCityMap('marseille')"><circle cx="198" cy="212" r="6" fill="#e8192c" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="174" y="228" class="cdmlbl">Marseille</text></g>
+          <g class="cdm" data-city="clermont" onclick="tCityMap('clermont')"><circle cx="170" cy="152" r="6" fill="#e8192c" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="178" y="157" class="cdmlbl">Clermont</text></g>
+          <g class="cdm" data-city="larochelle" onclick="tCityMap('larochelle')"><circle cx="88" cy="166" r="6" fill="#e8192c" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="54" y="162" class="cdmlbl">La Roch.</text></g>
+          <g class="cdm" data-city="tours" onclick="tCityMap('tours')"><circle cx="118" cy="120" r="6" fill="#e8192c" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="126" y="125" class="cdmlbl">Tours</text></g>
+          <g class="cdm" data-city="lorient" onclick="tCityMap('lorient')"><circle cx="66" cy="138" r="6" fill="#e8192c" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="38" y="134" class="cdmlbl">Lorient</text></g>
+          <g class="cdm" data-city="auxerre" onclick="tCityMap('auxerre')"><circle cx="162" cy="106" r="6" fill="#e8192c" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="170" y="111" class="cdmlbl">Auxerre</text></g>
+          <g class="cdm" data-city="troyes" onclick="tCityMap('troyes')"><circle cx="176" cy="92" r="6" fill="#e8192c" stroke="rgba(255,255,255,.5)" stroke-width="1.5" filter="url(#dropglow)"/><text x="184" y="97" class="cdmlbl">Troyes</text></g>
         </svg>
       </div>
       <div class="leg">
-        <span><div class="ldot" style="background:#e8192c;color:#e8192c"></div>UGC <strong style="color:#fff;margin-left:4px;" id="leg-u">8 salles</strong></span>
-        <span><div class="ldot" style="background:#1565c0;color:#1565c0"></div>CGR <strong style="color:#fff;margin-left:4px;" id="leg-c">7 salles</strong></span>
+        <span><div class="ldot" style="background:#1565c0;color:#1565c0"></div>UGC <strong style="color:#fff;margin-left:4px;" id="leg-u">8 salles</strong></span>
+        <span><div class="ldot" style="background:#e8192c;color:#e8192c"></div>CGR <strong style="color:#fff;margin-left:4px;" id="leg-c">7 salles</strong></span>
       </div>
 
       <table class="ctable">
-        <tr><th colspan="3">CENTRE</th></tr>
+        <tr><th colspan="3">UGC — 8 SALLES</th></tr>
         <tr class="cr cu ca" data-city="paris" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbu">UGC</span></td><td>Paris Bercy</td></tr>
-        <tr class="cr cu ca" data-city="auxerre" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbu">UGC</span></td><td>Auxerre</td></tr>
-        <tr class="cr cu ca" data-city="tours" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbu">UGC</span></td><td>Tours</td></tr>
-        <tr class="cr cu ca" data-city="troyes" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbu">UGC</span></td><td>Troyes</td></tr>
-        <tr class="cr cu ca" data-city="clermont" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbu">UGC</span></td><td>Clermont</td></tr>
-        <tr><th colspan="3">NORD</th></tr>
-        <tr class="cr cu ca" data-city="lille" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbu">UGC</span></td><td>Lille</td></tr>
-        <tr class="cr cu ca" data-city="caen" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbu">UGC</span></td><td>Caen</td></tr>
+        <tr class="cr cu ca" data-city="lyon" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbu">UGC</span></td><td>Lyon</td></tr>
+        <tr class="cr cu ca" data-city="toulouse" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbu">UGC</span></td><td>Toulouse</td></tr>
+        <tr class="cr cu ca" data-city="bordeaux" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbu">UGC</span></td><td>Bordeaux</td></tr>
+        <tr class="cr cu ca" data-city="nantes" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbu">UGC</span></td><td>Nantes</td></tr>
+        <tr class="cr cu ca" data-city="lille" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbu">UGC</span></td><td>Lille (Villeneuve d'Ascq)</td></tr>
         <tr class="cr cu ca" data-city="strasbourg" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbu">UGC</span></td><td>Strasbourg</td></tr>
-        <tr><th colspan="3">SUD</th></tr>
+        <tr class="cr cu ca" data-city="caen" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbu">UGC</span></td><td>Caen</td></tr>
+        <tr><th colspan="3">CGR — 7 SALLES</th></tr>
         <tr class="cr ca" data-city="marseille" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbg">CGR</span></td><td>Marseille</td></tr>
-        <tr class="cr ca" data-city="toulouse" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbg">CGR</span></td><td>Toulouse</td></tr>
-        <tr class="cr ca" data-city="lyon" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbg">CGR</span></td><td>Lyon</td></tr>
-        <tr><th colspan="3">OUEST</th></tr>
-        <tr class="cr ca" data-city="bordeaux" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbg">CGR</span></td><td>Bordeaux</td></tr>
-        <tr class="cr ca" data-city="nantes" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbg">CGR</span></td><td>Nantes</td></tr>
+        <tr class="cr ca" data-city="clermont" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbg">CGR</span></td><td>Clermont</td></tr>
         <tr class="cr ca" data-city="larochelle" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbg">CGR</span></td><td>La Rochelle</td></tr>
+        <tr class="cr ca" data-city="tours" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbg">CGR</span></td><td>Tours</td></tr>
         <tr class="cr ca" data-city="lorient" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbg">CGR</span></td><td>Lorient</td></tr>
+        <tr class="cr ca" data-city="auxerre" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbg">CGR</span></td><td>Auxerre</td></tr>
+        <tr class="cr ca" data-city="troyes" onclick="tCityRow(this)"><td><div class="cchk">✓</div></td><td><span class="cbb cbg">CGR</span></td><td>Troyes</td></tr>
       </table>
 
       <div style="display:flex;gap:6px;margin-top:11px;">
@@ -1004,37 +1111,37 @@ const BLBL={a:'Option A',b:'Option B',c:'Option C',d:'Option D — Complète'};
 const PRESETS = {
   mini: {
     matchs:{m1:1,m2:1,m3:1,m4:0,m5:0,m6:0,m7:0,m8:0},
-    cities:{paris:1,lille:1,lyon:1,marseille:1,bordeaux:1,
-            auxerre:0,tours:0,troyes:0,clermont:0,caen:0,strasbourg:0,
-            nantes:0,larochelle:0,lorient:0,toulouse:0},
+    cities:{paris:1,lyon:1,toulouse:1,bordeaux:1,
+            nantes:0,lille:0,strasbourg:0,caen:0,
+            marseille:1,clermont:0,larochelle:0,tours:0,lorient:0,auxerre:0,troyes:0},
     bill:'a',kake:0
   },
   poules: {
     matchs:{m1:1,m2:1,m3:1,m4:0,m5:0,m6:0,m7:0,m8:0},
-    cities:{paris:1,lille:1,caen:1,strasbourg:1,auxerre:1,tours:1,troyes:1,clermont:1,
-            marseille:1,toulouse:1,lyon:1,bordeaux:1,nantes:1,larochelle:1,lorient:1},
+    cities:{paris:1,lyon:1,toulouse:1,bordeaux:1,nantes:1,lille:1,strasbourg:1,caen:1,
+            marseille:1,clermont:1,larochelle:1,tours:1,lorient:1,auxerre:1,troyes:1},
     bill:'b',kake:1
   },
   parcours: {
     matchs:{m1:1,m2:1,m3:1,m4:1,m5:1,m6:1,m7:0,m8:0},
-    cities:{paris:1,lille:1,caen:1,strasbourg:1,auxerre:1,tours:1,troyes:1,clermont:1,
-            marseille:1,toulouse:1,lyon:1,bordeaux:1,nantes:1,larochelle:1,lorient:1},
+    cities:{paris:1,lyon:1,toulouse:1,bordeaux:1,nantes:1,lille:1,strasbourg:1,caen:1,
+            marseille:1,clermont:1,larochelle:1,tours:1,lorient:1,auxerre:1,troyes:1},
     bill:'c',kake:1
   },
   optimal: {
     matchs:{m1:1,m2:1,m3:1,m4:1,m5:1,m6:1,m7:1,m8:1},
-    cities:{paris:1,lille:1,caen:1,strasbourg:1,auxerre:1,tours:1,troyes:1,clermont:1,
-            marseille:1,toulouse:1,lyon:1,bordeaux:1,nantes:1,larochelle:1,lorient:1},
+    cities:{paris:1,lyon:1,toulouse:1,bordeaux:1,nantes:1,lille:1,strasbourg:1,caen:1,
+            marseille:1,clermont:1,larochelle:1,tours:1,lorient:1,auxerre:1,troyes:1},
     bill:'d',kake:1
   }
 };
 
 const S={
   m:{m1:1,m2:1,m3:1,m4:1,m5:1,m6:1,m7:1,m8:1},
-  c:{paris:{b:'u',on:1},auxerre:{b:'u',on:1},tours:{b:'u',on:1},troyes:{b:'u',on:1},clermont:{b:'u',on:1},
-     lille:{b:'u',on:1},caen:{b:'u',on:1},strasbourg:{b:'u',on:1},
-     marseille:{b:'g',on:1},toulouse:{b:'g',on:1},lyon:{b:'g',on:1},
-     bordeaux:{b:'g',on:1},nantes:{b:'g',on:1},larochelle:{b:'g',on:1},lorient:{b:'g',on:1}},
+  c:{paris:{b:'u',on:1},lyon:{b:'u',on:1},toulouse:{b:'u',on:1},
+     bordeaux:{b:'u',on:1},nantes:{b:'u',on:1},lille:{b:'u',on:1},strasbourg:{b:'u',on:1},caen:{b:'u',on:1},
+     marseille:{b:'g',on:1},clermont:{b:'g',on:1},larochelle:{b:'g',on:1},tours:{b:'g',on:1},
+     lorient:{b:'g',on:1},auxerre:{b:'g',on:1},troyes:{b:'g',on:1}},
   bill:'d',kake:1,
   preset:'optimal',
   saved:{a:null,b:null}
